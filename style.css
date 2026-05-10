@@ -116,16 +116,37 @@ header h1 {
   margin-bottom: 0.3rem;
 }
 
-.card-name {
+.card-sound {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.35rem;
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+
+.card-effect {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 0.25rem;
+}
+
+.card-location {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .card-desc {
   font-size: 0.84rem;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.card-cue {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
 }
 
 /* ── CSV Button ───────────────────────────────── */
@@ -144,92 +165,92 @@ header h1 {
 
 .csv-btn:hover { background: var(--accent-dark); }
 
-/* ── QCC Panel ────────────────────────────────── */
-.qcc-wrap {
-  max-width: 720px;
-  margin: 0 auto;
+/* ── Card hint & clickable ────────────────────── */
+.card { cursor: pointer; }
+
+.card-hint {
+  font-size: 0.72rem;
+  color: var(--primary);
+  opacity: 0.6;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
-.qcc-wrap h2 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 0.75rem;
+.card:hover .card-hint { opacity: 1; }
+
+/* ── How-To Modal ─────────────────────────────── */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-.qcc-intro {
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.75rem;
-}
+.modal-backdrop.open { display: flex; }
 
-.qcc-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
-}
-
-.qcc-btn {
-  display: inline-block;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: background 0.15s, transform 0.12s;
-}
-
-.qcc-btn:hover { transform: translateY(-1px); text-decoration: none; }
-.qcc-btn.primary { background: var(--primary); color: #fff; }
-.qcc-btn.primary:hover { background: var(--primary-dark); color: #fff; }
-.qcc-btn.secondary { background: var(--surface); color: var(--text); border: 2px solid var(--border); }
-.qcc-btn.secondary:hover { border-color: var(--primary); color: var(--primary); }
-
-/* ── FAQ Accordion ────────────────────────────── */
-.faq h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--text);
-}
-
-details {
+.modal-box {
   background: var(--surface);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
-  margin-bottom: 0.6rem;
-  overflow: hidden;
+  padding: 2rem;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  text-align: center;
+  animation: pop-in 0.18s ease;
 }
 
-summary {
-  padding: 0.85rem 1.1rem;
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.modal-letter {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+.modal-letter:hover { color: var(--primary-dark); }
+.modal-letter::after { content: " ×"; font-size: 1.5rem; opacity: 0.4; vertical-align: middle; }
+
+.modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.modal-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text);
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.modal-close {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.95rem;
+  transition: background 0.15s;
 }
 
-summary::-webkit-details-marker { display: none; }
-
-summary::after {
-  content: "+";
-  font-size: 1.2rem;
-  color: var(--muted);
-  transition: transform 0.2s;
-}
-
-details[open] summary::after { content: "−"; }
-
-details p {
-  padding: 0 1.1rem 1rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.65;
-}
+.modal-close:hover { background: var(--primary-dark); }
 
 /* ── Footer ───────────────────────────────────── */
 footer {
@@ -244,6 +265,4 @@ footer {
 /* ── Responsive ───────────────────────────────── */
 @media (max-width: 520px) {
   .panel-header { flex-direction: column; }
-  .qcc-actions { flex-direction: column; }
-  .qcc-btn { text-align: center; }
 }

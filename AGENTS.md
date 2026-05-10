@@ -38,7 +38,6 @@ Live site: https://hydrobolix.github.io/breathing-exercises
 | Audio Agent             | Add guided audio examples         | Planned    | Voice recordings per letter |
 | Data Analyst            | Usage analytics & feedback loop   | Planned    | - |
 | Mobile Optimizer        | PWA + offline support             | Planned    | - |
-| QCC Moderator           | Triage Questions, Concerns & Creative Suggestions via GitHub Issues | Active | Tab added to site; issues link → github.com/Hydrobolix/breathing-exercises/issues |
 
 ---
 
