@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breathing Exercises A–Z</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Breathing Exercises A–Z</h1>
+    <p class="subtitle">Two complementary systems for breath, calm, and clarity</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-system1" id="tab-system1" onclick="switchTab('system1')">System 1 — Techniques</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system2" id="tab-system2" onclick="switchTab('system2')">System 2 — Intentions</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-qcc" id="tab-qcc" onclick="switchTab('qcc')">QCC</button>
+  </nav>
+
+  <!-- SYSTEM 1 -->
+  <section id="panel-system1" class="tab-panel active" role="tabpanel" aria-labelledby="tab-system1">
+    <div class="panel-header">
+      <h2>System 1 — Breathing Techniques</h2>
+      <p>Classic and traditional breathing methods, one for every letter of the alphabet.</p>
+      <button class="csv-btn" onclick="downloadCSV('system1')">Download CSV</button>
+    </div>
+    <div class="card-grid" id="grid-system1"></div>
+  </section>
+
+  <!-- SYSTEM 2 -->
+  <section id="panel-system2" class="tab-panel" role="tabpanel" aria-labelledby="tab-system2">
+    <div class="panel-header">
+      <h2>System 2 — Breathing Intentions</h2>
+      <p>Goal-oriented breathing by desired effect — find what your body needs right now.</p>
+      <button class="csv-btn" onclick="downloadCSV('system2')">Download CSV</button>
+    </div>
+    <div class="card-grid" id="grid-system2"></div>
+  </section>
+
+  <!-- QCC -->
+  <section id="panel-qcc" class="tab-panel" role="tabpanel" aria-labelledby="tab-qcc">
+    <div class="qcc-wrap">
+      <h2>QCC — Questions, Concerns &amp; Creative Suggestions</h2>
+      <p class="qcc-intro">
+        Have a question about a technique? A concern about accuracy or safety?
+        A creative idea for a new exercise or feature? We'd love to hear from you.
+      </p>
+
+      <div class="qcc-actions">
+        <a class="qcc-btn primary" href="https://github.com/Hydrobolix/breathing-exercises/issues/new?template=qcc.md" target="_blank" rel="noopener">
+          Open a GitHub Issue
+        </a>
+        <a class="qcc-btn secondary" href="mailto:tyronerdixon@gmail.com?subject=Breathing%20Exercises%20QCC" target="_blank" rel="noopener">
+          Send an Email
+        </a>
+      </div>
+
+      <div class="faq">
+        <h3>Frequently Asked Questions</h3>
+
+        <details>
+          <summary>What is the difference between System 1 and System 2?</summary>
+          <p>System 1 is organized by <strong>technique name</strong> — each letter maps to a named breathing method (e.g. Box Breathing, Ujjayi, Wim Hof). System 2 is organized by <strong>intention or effect</strong> — each letter maps to a goal or feeling (e.g. Anxiety Relief, Energy Boost, Stress Release). Use System 1 to learn a method; use System 2 to find what you need right now.</p>
+        </details>
+
+        <details>
+          <summary>Are these exercises safe for everyone?</summary>
+          <p>Most techniques are gentle and suitable for healthy adults. However, if you have a respiratory condition, cardiovascular issue, or are pregnant, please consult a healthcare professional before practicing advanced breathwork (e.g. Wim Hof, Kapalabhati, or extended breath holds).</p>
+        </details>
+
+        <details>
+          <summary>How do I use the CSV download?</summary>
+          <p>Click "Download CSV" on either system tab to get a spreadsheet-ready file with all 26 exercises. Great for printing, journaling, or importing into your own apps.</p>
+        </details>
+
+        <details>
+          <summary>Can I suggest a new technique or correction?</summary>
+          <p>Yes — that's exactly what QCC is for. Click "Open a GitHub Issue" above and describe your suggestion. We review all submissions and credit contributors in the changelog.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with care by <a href="https://github.com/Hydrobolix" target="_blank" rel="noopener">Hydrobolix</a> &amp; Grok &middot; <a href="https://github.com/Hydrobolix/breathing-exercises" target="_blank" rel="noopener">View on GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
