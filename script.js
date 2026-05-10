@@ -8,7 +8,7 @@ const system1 = [
     howTo: "Inhale deeply through the nose while silently sounding 'Ahhh' in your mind. Let the breath fill your torso from the bottom up — belly, ribs, chest. Exhale slowly through the mouth, letting everything soften."
   },
   {
-    letter: "B", sound: 'Soft belly "Buh"',
+    letter: "B", sound: 'Soft "Buh"',
     effect: "Creates balance & stability",
     location: "Broadly into the belly",
     howTo: "Place one hand on your belly. Inhale gently through the nose, letting only the belly rise — chest stays still. Exhale slowly and feel the belly fall. Keep the 'Buh' sensation soft and grounded."
@@ -323,12 +323,22 @@ document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeModal();
 });
 
+document.addEventListener("click", e => {
+  const card = e.target.closest(".card");
+  if (!card) return;
+  const sys = card.dataset.system;
+  const idx = parseInt(card.dataset.index, 10);
+  const entry = sys === "1" ? system1[idx] : system2[idx];
+  const title = sys === "1" ? entry.sound : entry.desc;
+  openModal(entry.letter, title, entry.howTo);
+});
+
 // ── Card Rendering ────────────────────────────────────────────────────────────
 
 function renderSystem1(data, gridId) {
   const grid = document.getElementById(gridId);
-  grid.innerHTML = data.map(({ letter, sound, effect, location, howTo }) => `
-    <article class="card" onclick="openModal('${letter}', '${sound.replace(/'/g, "\\'")}', '${howTo.replace(/'/g, "\\'")}')">
+  grid.innerHTML = data.map(({ letter, sound, effect, location }, i) => `
+    <article class="card" data-system="1" data-index="${i}">
       <div class="card-letter">${letter}</div>
       <div class="card-sound">${sound}</div>
       <div class="card-effect">${effect}</div>
@@ -340,40 +350,14 @@ function renderSystem1(data, gridId) {
 
 function renderSystem2(data, gridId) {
   const grid = document.getElementById(gridId);
-  grid.innerHTML = data.map(({ letter, desc, cue, howTo }) => `
-    <article class="card" onclick="openModal('${letter}', '${desc.replace(/'/g, "\\'")}', '${howTo.replace(/'/g, "\\'")}')">
+  grid.innerHTML = data.map(({ letter, desc, cue }, i) => `
+    <article class="card" data-system="2" data-index="${i}">
       <div class="card-letter">${letter}</div>
       <div class="card-desc">${desc}</div>
       ${cue ? `<div class="card-cue">${cue}</div>` : ""}
       <div class="card-hint">Tap for how-to</div>
     </article>
   `).join("");
-}
-
-// ── CSV Download ──────────────────────────────────────────────────────────────
-
-function downloadCSV(system) {
-  let header, rows, filename;
-  if (system === "system1") {
-    header = "Letter,Sound Vibe,Breath Effect,Location,How To\n";
-    rows = system1.map(({ letter, sound, effect, location, howTo }) =>
-      `${letter},"${sound}","${effect}","${location}","${howTo.replace(/"/g, '""')}"`
-    ).join("\n");
-    filename = "Breathing_Exercises_AZ_System1.csv";
-  } else {
-    header = "Letter,Description,Cue,How To\n";
-    rows = system2.map(({ letter, desc, cue, howTo }) =>
-      `${letter},"${desc.replace(/"/g, '""')}","${cue.replace(/"/g, '""')}","${howTo.replace(/"/g, '""')}"`
-    ).join("\n");
-    filename = "Breathing_Exercises_AZ_System2.csv";
-  }
-  const blob = new Blob([header + rows], { type: "text/csv;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
