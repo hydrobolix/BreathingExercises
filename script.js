@@ -292,7 +292,122 @@ const system2 = [
   },
 ];
 
+// ── 50 Dimensions of Thought ─────────────────────────────────────────────────
+
+const system3 = [
+  { dim: "0D",  name: "Point" },
+  { dim: "1D",  name: "Pivot" },
+  { dim: "2D",  name: "Path" },
+  { dim: "3D",  name: "Structure" },
+  { dim: "4D",  name: "Immersion" },
+  { dim: "5D",  name: "Reality" },
+  { dim: "6D",  name: "React" },
+  { dim: "7D",  name: "Choice" },
+  { dim: "8D",  name: "Decision" },
+  { dim: "9D",  name: "Judgment" },
+  { dim: "10D", name: "Order" },
+  { dim: "11D", name: "Cycle" },
+  { dim: "12D", name: "Terrain" },
+  { dim: "13D", name: "P*rn / Military" },
+  { dim: "14D", name: "I**est / Navy" },
+  { dim: "15D", name: "B***iality / Marines" },
+  { dim: "16D", name: "Spirit-o-graphy" },
+  { dim: "17D", name: "Men" },
+  { dim: "18D", name: "Women" },
+  { dim: "19D", name: "Transphobia" },
+  { dim: "20D", name: "Metal men" },
+  { dim: "21D", name: "Werewolf" },
+  { dim: "22D", name: "Ghoul" },
+  { dim: "23D", name: "Orc" },
+  { dim: "24D", name: "Troll" },
+  { dim: "25D", name: "Ogre" },
+  { dim: "26D", name: "Witch / Humanitarian" },
+  { dim: "27D", name: "Wraith" },
+  { dim: "28D", name: "Giant" },
+  { dim: "29D", name: "Jester" },
+  { dim: "30D", name: "Dark Armored Knight" },
+  { dim: "31D", name: "Fiends" },
+  { dim: "32D", name: "Elemental" },
+  { dim: "33D", name: "Undeath" },
+  { dim: "34D", name: "Lesser Demon / Oni" },
+  { dim: "35D", name: "Greater Demon" },
+  { dim: "36D", name: "Oxygen" },
+  { dim: "37D", name: "Kyreek / Angel" },
+  { dim: "38D", name: "Abyssian" },
+  { dim: "39D", name: "Voidspawn" },
+  { dim: "40D", name: "Vampire" },
+  { dim: "41D", name: "Lesbians" },
+  { dim: "42D", name: "Hermaphrodite" },
+  { dim: "43D", name: "Literally a man with a vagina / Voldemort" },
+  { dim: "44D", name: "Necromancy / Nurse / Pregnancies" },
+  { dim: "45D", name: "Death / Treant" },
+  { dim: "46D", name: "Re-v" },
+  { dim: "47D", name: "Legion" },
+  { dim: "48D", name: "Djinn" },
+  { dim: "49D", name: "Dragon" },
+  { dim: "50D", name: "Ant / Couples / Parents" },
+];
+
+// ── Physics Dimensions of Thought ────────────────────────────────────────────
+
+const system4 = [
+  { dim: "3",  name: "Touch" },
+  { dim: "6",  name: "Sound" },
+  { dim: "9",  name: "Light" },
+  { dim: "12", name: "Bug" },
+  { dim: "15", name: "Parasite" },
+  { dim: "18", name: "Planet" },
+  { dim: "21", name: "Star" },
+  { dim: "24", name: "Black Hole" },
+  { dim: "27", name: "Tardigrade" },
+  { dim: "30", name: "Human" },
+  { dim: "33", name: "Cow" },
+  { dim: "36", name: "Communication" },
+  { dim: "39", name: "Maturity" },
+  { dim: "42", name: "Sex" },
+  { dim: "45", name: "Death" },
+];
+
+// ── Timing Data (inhale, hold, exhale in seconds) ────────────────────────────
+
+const timing1 = {
+  A:[4,0,4], B:[4,0,4], C:[4,0,4], D:[4,0,4], E:[4,0,8],
+  F:[4,0,4], G:[4,0,4], H:[4,0,6], I:[3,2,4], J:[3,0,3],
+  K:[2,0,2], L:[5,0,5], M:[4,0,6], N:[4,0,4], O:[4,0,4],
+  P:[4,0,4], Q:[6,0,6], R:[4,0,4], S:[4,0,6], T:[4,0,4],
+  U:[4,0,4], V:[4,0,6], W:[2,0,2], X:[4,0,8], Y:[4,0,4],
+  Z:[15,0,15]
+};
+
+const timing2 = {
+  A:[4,0,4], B:[4,4,4], C:[4,0,6], D:[4,0,4], E:[4,0,4],
+  F:[3,0,4], G:[4,2,4], H:[5,0,5], I:[4,2,4], J:[4,0,4],
+  K:[2,0,2], L:[4,0,4], M:[4,0,6], N:[4,0,4], O:[4,2,4],
+  P:[4,0,4], Q:[4,0,6], R:[5,0,5], S:[4,0,8], T:[4,0,4],
+  U:[5,0,5], V:[4,0,6], W:[4,0,4], X:[4,0,4], Y:[4,0,4],
+  Z:[5,0,5]
+};
+
 // ── Tab Switching ─────────────────────────────────────────────────────────────
+
+const tabMeta = {
+  system1: {
+    title: "System 1 — Sound & Effect",
+    subtitle: "The sound vibe, breath effect, and where oxygen flows — one for every letter."
+  },
+  system2: {
+    title: "System 2 — Flow & Location",
+    subtitle: "Where oxygen travels in the body and the physical cues that guide it there."
+  },
+  system3: {
+    title: "50 Dimensions of Thought",
+    subtitle: "A complete dimensional map — from Point (0D) to Ant, Couples & Parents (50D)."
+  },
+  system4: {
+    title: "Physics Dimensions of Thought",
+    subtitle: "The physical universe mapped in multiples of 3 — from Touch to Death."
+  },
+};
 
 function switchTab(id) {
   document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
@@ -304,14 +419,44 @@ function switchTab(id) {
   const btn = document.getElementById("tab-" + id);
   btn.classList.add("active");
   btn.setAttribute("aria-selected", "true");
+
+  const meta = tabMeta[id];
+  if (meta) {
+    document.getElementById("site-title").textContent = meta.title;
+    document.getElementById("site-subtitle").textContent = meta.subtitle;
+  }
 }
+
+// ── Dark Mode ─────────────────────────────────────────────────────────────────
+
+function toggleDark() {
+  const isDark = document.documentElement.dataset.theme === "dark";
+  document.documentElement.dataset.theme = isDark ? "" : "dark";
+  document.getElementById("dark-toggle").textContent = isDark ? "🌙" : "☀️";
+  localStorage.setItem("theme", isDark ? "light" : "dark");
+}
+
+(function initTheme() {
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") {
+    document.documentElement.dataset.theme = "dark";
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("dark-toggle").textContent = "☀️";
+    });
+  }
+})();
 
 // ── Modal ─────────────────────────────────────────────────────────────────────
 
-function openModal(letter, title, body) {
+let _modalTiming = [4, 0, 4];
+let _modalLabel = "";
+
+function openModal(letter, title, body, timing, label) {
   document.getElementById("modal-letter").textContent = letter;
   document.getElementById("modal-title").textContent = title;
   document.getElementById("modal-body").textContent = body;
+  _modalTiming = timing;
+  _modalLabel = label;
   document.getElementById("modal").classList.add("open");
 }
 
@@ -320,7 +465,7 @@ function closeModal() {
 }
 
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeModal();
+  if (e.key === "Escape") { closeModal(); stopTimer(); }
 });
 
 document.addEventListener("click", e => {
@@ -330,8 +475,69 @@ document.addEventListener("click", e => {
   const idx = parseInt(card.dataset.index, 10);
   const entry = sys === "1" ? system1[idx] : system2[idx];
   const title = sys === "1" ? entry.sound : entry.desc;
-  openModal(entry.letter, title, entry.howTo);
+  const t = sys === "1" ? timing1[entry.letter] : timing2[entry.letter];
+  openModal(entry.letter, title, entry.howTo, t, title);
 });
+
+// ── Breathing Timer ───────────────────────────────────────────────────────────
+
+const CIRCUMFERENCE = 503;
+let _timerInterval = null;
+let _timer = null;
+
+const phaseColors = { inhale: "#3b82f6", hold: "#10b981", exhale: "#8b5cf6" };
+
+function openTimer() {
+  closeModal();
+  const [inhale, hold, exhale] = _modalTiming;
+  _timer = { inhale, hold, exhale, phase: "inhale", phaseDuration: inhale, phaseStart: Date.now(), round: 1 };
+  document.getElementById("timer-label").textContent = _modalLabel;
+  document.getElementById("timer").classList.add("open");
+  _timerTick();
+  _timerInterval = setInterval(_timerTick, 100);
+}
+
+function stopTimer() {
+  clearInterval(_timerInterval);
+  _timerInterval = null;
+  _timer = null;
+  document.getElementById("timer").classList.remove("open");
+}
+
+function _timerTick() {
+  const t = _timer;
+  if (!t) return;
+  const elapsed = (Date.now() - t.phaseStart) / 1000;
+  const remaining = Math.max(0, t.phaseDuration - elapsed);
+
+  const ring = document.getElementById("timer-ring");
+  let offset;
+  if (t.phase === "inhale") {
+    offset = CIRCUMFERENCE * (remaining / t.phaseDuration);
+  } else if (t.phase === "hold") {
+    offset = 0;
+  } else {
+    offset = CIRCUMFERENCE * (1 - remaining / t.phaseDuration);
+  }
+  ring.style.strokeDashoffset = offset;
+  ring.style.stroke = phaseColors[t.phase];
+
+  document.getElementById("timer-count").textContent = Math.ceil(remaining);
+  document.getElementById("timer-phase").textContent = t.phase.toUpperCase();
+  document.getElementById("timer-round").textContent = "Round " + t.round;
+
+  if (remaining <= 0) {
+    if (t.phase === "inhale" && t.hold > 0) {
+      t.phase = "hold"; t.phaseDuration = t.hold;
+    } else if (t.phase === "inhale" || t.phase === "hold") {
+      t.phase = "exhale"; t.phaseDuration = t.exhale;
+    } else {
+      t.round++;
+      t.phase = "inhale"; t.phaseDuration = t.inhale;
+    }
+    t.phaseStart = Date.now();
+  }
+}
 
 // ── Card Rendering ────────────────────────────────────────────────────────────
 
@@ -360,7 +566,19 @@ function renderSystem2(data, gridId) {
   `).join("");
 }
 
+function renderDimensions(data, gridId) {
+  const grid = document.getElementById(gridId);
+  grid.innerHTML = data.map(({ dim, name }) => `
+    <article class="card dim-card">
+      <div class="card-dim">${dim}</div>
+      <div class="card-dim-name">${name}</div>
+    </article>
+  `).join("");
+}
+
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 renderSystem1(system1, "grid-system1");
 renderSystem2(system2, "grid-system2");
+renderDimensions(system3, "grid-system3");
+renderDimensions(system4, "grid-system4");

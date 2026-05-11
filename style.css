@@ -1,6 +1,15 @@
 /* ── Reset & Base ─────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+  --shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
 :root {
   --bg: #f5f7fa;
   --surface: #ffffff;
@@ -251,6 +260,133 @@ header h1 {
 }
 
 .modal-close:hover { background: var(--primary-dark); }
+
+/* ── Dimension Cards ──────────────────────────── */
+.dim-card { cursor: default; }
+.dim-card:hover { transform: translateY(-2px); }
+
+.card-dim {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--accent-dark);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.card-dim-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* ── Dark Toggle ──────────────────────────────── */
+header { position: relative; }
+
+.dark-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-toggle:hover { background: rgba(255,255,255,0.25); }
+
+/* ── Modal Actions ────────────────────────────── */
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.modal-practice {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.modal-practice:hover { background: var(--accent-dark); }
+
+/* ── Breathing Timer ──────────────────────────── */
+.timer-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-backdrop.open { display: flex; }
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: #fff;
+  text-align: center;
+  animation: pop-in 0.2s ease;
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.7;
+  max-width: 260px;
+}
+
+.timer-phase {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.timer-svg {
+  width: 220px;
+  height: 220px;
+}
+
+.timer-svg text { fill: #fff; font-family: inherit; }
+
+#timer-ring { transition: stroke-dashoffset 0.1s linear, stroke 0.4s ease; }
+
+.timer-round {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.timer-stop {
+  margin-top: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 0.5rem 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.timer-stop:hover { background: rgba(255,255,255,0.25); }
 
 /* ── Footer ───────────────────────────────────── */
 footer {

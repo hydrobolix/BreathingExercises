@@ -9,13 +9,16 @@
 <body>
 
   <header>
-    <h1>Breathing Exercises A–Z</h1>
-    <p class="subtitle">Two complementary systems for breath, calm, and clarity</p>
+    <button class="dark-toggle" id="dark-toggle" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
+    <h1 id="site-title">System 1 — Sound &amp; Effect</h1>
+    <p class="subtitle" id="site-subtitle">The sound vibe, breath effect, and where oxygen flows — one for every letter.</p>
   </header>
 
   <nav class="tabs" role="tablist">
     <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-system1" id="tab-system1" onclick="switchTab('system1')">System 1 — Sound &amp; Effect</button>
     <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system2" id="tab-system2" onclick="switchTab('system2')">System 2 — Flow &amp; Location</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system3" id="tab-system3" onclick="switchTab('system3')">50 Dimensions of Thought</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system4" id="tab-system4" onclick="switchTab('system4')">Physics Dimensions of Thought</button>
   </nav>
 
   <!-- SYSTEM 1 -->
@@ -39,6 +42,24 @@
   </section>
 
 
+  <!-- SYSTEM 3: 50 Dimensions of Thought -->
+  <section id="panel-system3" class="tab-panel" role="tabpanel" aria-labelledby="tab-system3">
+    <div class="panel-header">
+      <h2>50 Dimensions of Thought</h2>
+      <p>A complete map of dimensional archetypes from 0D to 50D.</p>
+    </div>
+    <div class="card-grid" id="grid-system3"></div>
+  </section>
+
+  <!-- SYSTEM 4: Physics Dimensions of Thought -->
+  <section id="panel-system4" class="tab-panel" role="tabpanel" aria-labelledby="tab-system4">
+    <div class="panel-header">
+      <h2>Physics Dimensions of Thought</h2>
+      <p>Dimensional levels scaled in multiples of 3, from Touch to Death.</p>
+    </div>
+    <div class="card-grid" id="grid-system4"></div>
+  </section>
+
   <footer>
     <p>Built with care by <a href="https://github.com/Hydrobolix" target="_blank" rel="noopener">Hydrobolix</a> &amp; Grok &middot; <a href="https://github.com/Hydrobolix/breathing-exercises" target="_blank" rel="noopener">View on GitHub</a></p>
   </footer>
@@ -49,7 +70,29 @@
       <div class="modal-letter" onclick="closeModal()" title="Click to close" id="modal-letter">A</div>
       <div class="modal-title" id="modal-title"></div>
       <p class="modal-body" id="modal-body"></p>
-      <button class="modal-close" onclick="closeModal()">Close</button>
+      <div class="modal-actions">
+        <button class="modal-practice" onclick="openTimer()">Practice</button>
+        <button class="modal-close" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breathing Timer -->
+  <div id="timer" class="timer-backdrop">
+    <div class="timer-box">
+      <div class="timer-label" id="timer-label"></div>
+      <div class="timer-phase" id="timer-phase">INHALE</div>
+      <svg class="timer-svg" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="var(--border)" stroke-width="8"/>
+        <circle id="timer-ring" cx="100" cy="100" r="80" fill="none"
+          stroke="#3b82f6" stroke-width="8" stroke-linecap="round"
+          stroke-dasharray="503" stroke-dashoffset="503"
+          transform="rotate(-90 100 100)"/>
+        <text id="timer-count" x="100" y="112" text-anchor="middle"
+          font-size="48" font-weight="900" fill="currentColor">4</text>
+      </svg>
+      <div class="timer-round" id="timer-round">Round 1</div>
+      <button class="timer-stop" onclick="stopTimer()">Stop</button>
     </div>
   </div>
 

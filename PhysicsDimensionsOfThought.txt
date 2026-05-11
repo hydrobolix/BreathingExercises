@@ -1,0 +1,15 @@
+3 - Touch
+6 - Sound
+9 - Light
+12 - Bug
+15 - Parasite
+18 - Planet
+21 - Star
+24 - Black hole
+27 - Tardigrade
+30 - Human
+33 - Cow
+36 - Communication
+39 - Maturity
+42 - Sex
+45 - Death
