@@ -1,15 +1,6 @@
 /* ── Reset & Base ─────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.dark {
-  --bg: #0f172a;
-  --surface: #1e293b;
-  --text: #e2e8f0;
-  --muted: #94a3b8;
-  --border: #334155;
-  --shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
 :root {
   --bg: #f5f7fa;
   --surface: #ffffff;
@@ -22,6 +13,15 @@
   --border: #e2e8f0;
   --radius: 12px;
   --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.dark {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+  --shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 body {
