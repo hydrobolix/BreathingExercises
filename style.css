@@ -301,6 +301,8 @@ header { position: relative; }
 }
 
 .dark-toggle:hover { background: rgba(255,255,255,0.25); }
+.dark-toggle::before { content: "🌙"; }
+.dark .dark-toggle::before { content: "☀️"; }
 
 /* ── Modal Actions ────────────────────────────── */
 .modal-actions {

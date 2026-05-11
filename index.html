@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,16 +9,16 @@
 <body>
 
   <header>
-    <button class="dark-toggle" id="dark-toggle" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
-    <h1 id="site-title">System 1 — Sound &amp; Effect</h1>
-    <p class="subtitle" id="site-subtitle">The sound vibe, breath effect, and where oxygen flows — one for every letter.</p>
+    <button class="dark-toggle" id="dark-toggle" title="Toggle dark mode"></button>
+    <h1 id="site-title">Breath &amp; Theory</h1>
+    <p class="subtitle" id="site-subtitle">Breathing systems · Game Theory · Dimensions of Thought</p>
   </header>
 
   <nav class="tabs" role="tablist">
     <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-system1" id="tab-system1" onclick="switchTab('system1')">System 1 — Sound &amp; Effect</button>
     <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system2" id="tab-system2" onclick="switchTab('system2')">System 2 — Flow &amp; Location</button>
-    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system3" id="tab-system3" onclick="switchTab('system3')">50 Dimensions of Thought</button>
-    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system4" id="tab-system4" onclick="switchTab('system4')">Physics Dimensions of Thought</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system3" id="tab-system3" onclick="switchTab('system3')">Game Theory — Dimensions</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-system4" id="tab-system4" onclick="switchTab('system4')">Game Theory — Physics</button>
   </nav>
 
   <!-- SYSTEM 1 -->
@@ -45,7 +45,7 @@
   <!-- SYSTEM 3: 50 Dimensions of Thought -->
   <section id="panel-system3" class="tab-panel" role="tabpanel" aria-labelledby="tab-system3">
     <div class="panel-header">
-      <h2>50 Dimensions of Thought</h2>
+      <h2>Game Theory — Dimensions</h2>
       <p>A complete map of dimensional archetypes from 0D to 50D.</p>
     </div>
     <div class="card-grid" id="grid-system3"></div>
@@ -54,7 +54,7 @@
   <!-- SYSTEM 4: Physics Dimensions of Thought -->
   <section id="panel-system4" class="tab-panel" role="tabpanel" aria-labelledby="tab-system4">
     <div class="panel-header">
-      <h2>Physics Dimensions of Thought</h2>
+      <h2>Game Theory — Physics</h2>
       <p>Dimensional levels scaled in multiples of 3, from Touch to Death.</p>
     </div>
     <div class="card-grid" id="grid-system4"></div>

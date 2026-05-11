@@ -400,12 +400,12 @@ const tabMeta = {
     subtitle: "Where oxygen travels in the body and the physical cues that guide it there."
   },
   system3: {
-    title: "50 Dimensions of Thought",
-    subtitle: "A complete dimensional map — from Point (0D) to Ant, Couples & Parents (50D)."
+    title: "Game Theory — Dimensions",
+    subtitle: "A complete map of dimensional archetypes from 0D to 50D."
   },
   system4: {
-    title: "Physics Dimensions of Thought",
-    subtitle: "The physical universe mapped in multiples of 3 — from Touch to Death."
+    title: "Game Theory — Physics",
+    subtitle: "Dimensional levels scaled in multiples of 3, from Touch to Death."
   },
 };
 
@@ -429,10 +429,9 @@ function switchTab(id) {
 
 // ── Dark Mode ─────────────────────────────────────────────────────────────────
 
-function toggleDark() {
-  const isDark = document.documentElement.classList.toggle("dark");
-  document.getElementById("dark-toggle").textContent = isDark ? "☀️" : "🌙";
-}
+document.getElementById("dark-toggle").addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+});
 
 // ── Modal ─────────────────────────────────────────────────────────────────────
 
