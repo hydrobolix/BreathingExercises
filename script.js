@@ -430,21 +430,9 @@ function switchTab(id) {
 // ── Dark Mode ─────────────────────────────────────────────────────────────────
 
 function toggleDark() {
-  const isDark = document.documentElement.dataset.theme === "dark";
-  document.documentElement.dataset.theme = isDark ? "" : "dark";
-  document.getElementById("dark-toggle").textContent = isDark ? "🌙" : "☀️";
-  localStorage.setItem("theme", isDark ? "light" : "dark");
+  const isDark = document.documentElement.classList.toggle("dark");
+  document.getElementById("dark-toggle").textContent = isDark ? "☀️" : "🌙";
 }
-
-(function initTheme() {
-  const saved = localStorage.getItem("theme");
-  if (saved === "dark") {
-    document.documentElement.dataset.theme = "dark";
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("dark-toggle").textContent = "☀️";
-    });
-  }
-})();
 
 // ── Modal ─────────────────────────────────────────────────────────────────────
 
